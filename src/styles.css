@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* You can add global styles to this file, and also import other style files */
+a {
+  cursor: pointer;
+}
+
+.app-container {
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.btn-delete-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.product-percent {
+  color: red;
+}
+
+.product-img {
+  width: 340px !important;
+  height: 340px;
+  float: left;
+  border-radius: 12px !important;
+  margin: -12px !important;
+}
+
+.product-li{
+  width: 350px;
+  margin-top: 10px;
+}
+.products-ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.bid-btn{
+  width: 100%;
+  margin-top: 20px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

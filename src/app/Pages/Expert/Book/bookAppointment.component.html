@@ -1,0 +1,42 @@
+﻿<div class="container">
+  <div class="float-lg-right">
+    <h2>Select Timezone</h2>
+    <jqxDropDownList #timezonesDropDownList
+                     [width]="200" [height]="30" [source]="timezonesSource"
+                     (onSelect)="timezonesOnSelect($event)" [selectedIndex]="timezoneSelectedIndex">
+    </jqxDropDownList>
+  </div>
+  <div class="align-self-centerr">
+    <h2>Select Date</h2>
+    <!--    <jqxCalendar [width]="220" [height]="220"></jqxCalendar>-->
+    <jqxCalendar #myCalendar style="margin-top: 3px" (onChange)="myCalendarEvent($event)"
+                 [width]="220" [height]="220">
+    </jqxCalendar>
+  </div>
+
+  <div>
+    <br/>
+    <h2>Timezone:{{timezone.timezoneOffset}} ({{timezone.timezone}})</h2>
+  </div>
+  <div>
+    <h2>Duration</h2>
+    <jqxDropDownList #durationDropDownList
+                     [width]="200" [height]="30" [source]="durationSource" (onSelect)="durationOnSelect($event)">
+    </jqxDropDownList>
+  </div>
+  <div>
+    <h2>Time Slot</h2>
+    <jqxDropDownList #timeSlotDropDownList
+                     [width]="200" [height]="30" [source]="timeSlotSource" (onSelect)="timeslotOnSelect($event)">
+    </jqxDropDownList>
+  </div>
+  <div *ngIf="fromTime && toTime">
+    <h3>your appointment will be on</h3>
+    <h3>{{fromTime.format('DD MMM YYYY')}}</h3>
+    <h3><b>From :</b> {{fromTime.format('hh:mm A')}} <b>To:</b>  {{toTime.format('hh:mm A')}}</h3>
+  </div>
+
+  <div *ngIf="fromTime && toTime">
+    <button class="align-self-center btn-sm btn-success" (click)="bookAppointment()">book</button>
+  </div>
+</div>

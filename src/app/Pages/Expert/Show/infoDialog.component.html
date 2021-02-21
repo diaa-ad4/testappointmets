@@ -1,0 +1,20 @@
+﻿<mat-card class="product-card">
+  <mat-card-header>
+    <mat-card-title>{{ expert.name }}</mat-card-title>
+    <img mat-card-avatar src="https://img.icons8.com/ios-glyphs/344/user-male.png">
+    <mat-card-subtitle>
+      <strong>{{ expert.expert }}</strong>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <strong>Country: {{expert.country}}</strong>
+    <br>
+    <strong>Working hours: {{expert.work_start_time}} -> {{expert.work_end_time}}</strong>
+  </mat-card-content>
+</mat-card>
+  <div mat-dialog-actions>
+    <button class="align-self-center btn-sm btn-success" (click)="bookNow(expert)">book now</button>
+    <button style="margin-left: 10px" class="align-self-center btn-sm"  (click)="onNoClick()">Close</button>
+  </div>
+
+

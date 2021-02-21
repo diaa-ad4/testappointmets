@@ -1,0 +1,20 @@
+﻿<h1>Experts</h1>
+<ul class="u-listReset product-grid products-ul">
+  <li class="u-marginBottom product-li" *ngFor="let expert of experts">
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title>{{ expert.name }}</mat-card-title>
+        <img mat-card-avatar src="https://img.icons8.com/ios-glyphs/344/user-male.png">
+        <mat-card-subtitle>
+          <strong>{{ expert.expert }}</strong>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button class="btn-sm btn-success" (click)="showExpert(expert)">info</button>
+      </mat-card-actions>
+    </mat-card>
+  </li>
+</ul>
+
+
+
