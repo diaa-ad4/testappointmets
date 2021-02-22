@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'experts/:id/book', component: BookAppointmentComponent},
 
   // otherwise redirect to home
-  {path: '**', redirectTo: ''}
+  {path: '**', redirectTo: '/experts'}
 ];
 
 @NgModule({

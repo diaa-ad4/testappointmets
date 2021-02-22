@@ -16,6 +16,10 @@ export class ExpertService {
   ) {
   }
 
+  getUserTimezone(){
+    return this.http.get('http://ip-api.com/json');
+  }
+
   getAll() {
     return this.http.get(`${environment.apiUrl}/experts`);
   }
