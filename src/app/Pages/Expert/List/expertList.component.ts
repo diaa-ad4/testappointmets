@@ -24,11 +24,11 @@ export class ExpertListComponent implements OnInit {
         return this.experts = (<Expert[]> experts);
       });
 
-    this.expertService.getUserTimezone()
-      .pipe(first())
-      .subscribe(result => {
-        this.timezone.set(result['timezone']);
-      });
+    // this.expertService.getUserTimezone()
+    //   .pipe(first())
+    //   .subscribe(result => {
+    //     this.timezone.set(result['timezone']);
+    //   });
   }
 
 
